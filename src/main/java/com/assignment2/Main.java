@@ -19,6 +19,26 @@ public class Main {
         System.out.println("Size after remove: " + arr.size());
         System.out.println("Contains 7? " + arr.contains(7));
         System.out.println("Contains 999? " + arr.contains(999));
+        LinkedList list = new LinkedList();
+        for (int i = 0; i < 5; i++) {
+            list.add(i);
+        }
+        System.out.println("LinkedList size: " + list.size());
+        System.out.println("LinkedList element at index 2: " + list.get(2));
+        System.out.println("LinkedList element at index 4: " + list.get(4));
+        list.add(0, 999);
+        System.out.println("LinkedList after inserting 999 at index 0: " + list.get(0));
+        System.out.println("Old index 0 now at index 1: " + list.get(1));
+        System.out.println("LinkedList size after insert: " + list.size());
+        int removedFromList = list.remove(0);
+        System.out.println("Removed from LinkedList: " + removedFromList);
+        System.out.println("New index 0: " + list.get(0));
+        System.out.println("LinkedList size after remove: " + list.size());
+        System.out.println("LinkedList contains 3? " + list.contains(3));
+        System.out.println("LinkedList contains 999? " + list.contains(999));
+        }
+
+
+
     }
 
-}
