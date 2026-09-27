@@ -1,5 +1,6 @@
 # Assignment 2: Algorithmic Analysis, Correctness, and Performance Trade-offs
 
+**Status:** Complete — all three data structures implemented, tested, and benchmarked across four workloads.
 ## 1. Overview
 
 This project implements and analyzes three data structures in Java: a Dynamic Array,
