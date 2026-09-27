@@ -1,6 +1,7 @@
 package com.assignment2;
 
 public class MinHeap {
+    public static long comparisons = 0;
     private int[] data;
     private int size;
 
@@ -30,6 +31,7 @@ public class MinHeap {
         data[i] = data[j];
         data[j] = temp;
     }
+
     public void insert(int x) {
         if (size == data.length) {
             resize();
@@ -38,9 +40,14 @@ public class MinHeap {
         int current = size;
         size++;
 
-        while (current > 0 && data[current] < data[parent(current)]) {
-            swap(current, parent(current));
-            current = parent(current);
+        while (current > 0) {
+            comparisons++;
+            if (data[current] < data[parent(current)]) {
+                swap(current, parent(current));
+                current = parent(current);
+            } else {
+                break;
+            }
         }
     }
 
@@ -74,11 +81,17 @@ public class MinHeap {
             int right = rightChild(i);
             int smallest = i;
 
-            if (left < size && data[left] < data[smallest]) {
-                smallest = left;
+            if (left < size) {
+                comparisons++;
+                if (data[left] < data[smallest]) {
+                    smallest = left;
+                }
             }
-            if (right < size && data[right] < data[smallest]) {
-                smallest = right;
+            if (right < size) {
+                comparisons++;
+                if (data[right] < data[smallest]) {
+                    smallest = right;
+                }
             }
 
             if (smallest == i) {

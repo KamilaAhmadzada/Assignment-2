@@ -1,0 +1,5 @@
+n,insertTimeMs,extractTimeMs,comparisons,sortedCorrectly
+100,0,0,1035,true
+1000,0,0,17226,true
+10000,0,1,239329,true
+100000,4,10,3059125,true

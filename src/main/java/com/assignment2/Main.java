@@ -1,7 +1,9 @@
 package com.assignment2;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         DynamicArray arr = new DynamicArray();
         for (int i = 0; i < 15; i++) {
             arr.add(i);
@@ -46,6 +48,10 @@ public class Main {
         System.out.println("LinkedList size after remove: " + list.size());
         System.out.println("LinkedList contains 3? " + list.contains(3));
         System.out.println("LinkedList contains 999? " + list.contains(999));
+        Benchmark.runWorkload1();
+        Benchmark.runWorkload2();
+        Benchmark.runWorkload3();
+        Benchmark.runWorkload4();
         }
 
 

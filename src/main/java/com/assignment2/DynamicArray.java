@@ -3,6 +3,7 @@ package com.assignment2;
 public class DynamicArray {
     private int[] data;
     private int size;
+    public static long comparisons = 0;
 
     public DynamicArray() {
         data = new int[10];
@@ -60,6 +61,7 @@ public class DynamicArray {
     }
     public boolean contains(int x) {
         for (int i = 0; i < size; i++) {
+            comparisons++;
             if (data[i] == x) {
                 return true;
             }

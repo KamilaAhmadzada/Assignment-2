@@ -1,0 +1,9 @@
+structure,n,timeMs,accesses
+DynamicArray,100,0,10000
+LinkedList,100,1,501508
+DynamicArray,1000,0,10000
+LinkedList,1000,6,5005208
+DynamicArray,10000,0,10000
+LinkedList,10000,63,50129208
+DynamicArray,100000,0,10000
+LinkedList,100000,923,502489208

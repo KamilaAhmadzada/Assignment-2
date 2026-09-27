@@ -1,0 +1,9 @@
+structure,n,timeMs,comparisons
+DynamicArray,100,0,100000
+LinkedList,100,0,100000
+DynamicArray,1000,1,999230
+LinkedList,1000,1,999230
+DynamicArray,10000,4,9944326
+LinkedList,10000,14,9944326
+DynamicArray,100000,17,95040223
+LinkedList,100000,199,95040223

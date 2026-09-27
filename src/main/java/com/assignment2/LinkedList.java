@@ -13,6 +13,7 @@ public class LinkedList {
 
     private Node head;
     private int size;
+    public static long comparisons = 0;
 
     public LinkedList() {
         head = null;
@@ -42,6 +43,7 @@ public class LinkedList {
         Node current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
+            nodeAccesses++;
         }
         return current.value;
     }
@@ -86,6 +88,7 @@ public class LinkedList {
     public boolean contains(int x) {
         Node current = head;
         while (current != null) {
+            comparisons++;
             if (current.value == x) {
                 return true;
             }
@@ -93,5 +96,6 @@ public class LinkedList {
         }
         return false;
     }
+    public static long nodeAccesses = 0;
 
 }
