@@ -23,6 +23,16 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             list.add(i);
         }
+        MinHeap heap = new MinHeap();
+        heap.insert(5);
+        heap.insert(3);
+        heap.insert(8);
+        heap.insert(1);
+        System.out.println("Heap size: " + heap.size());
+        System.out.println("Min element: " + heap.peekMin());
+        System.out.println("Extracted: " + heap.extractMin());
+        System.out.println("New min: " + heap.peekMin());
+        System.out.println("Heap size after extract: " + heap.size());
         System.out.println("LinkedList size: " + list.size());
         System.out.println("LinkedList element at index 2: " + list.get(2));
         System.out.println("LinkedList element at index 4: " + list.get(4));
